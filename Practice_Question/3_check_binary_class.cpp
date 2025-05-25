@@ -51,12 +51,12 @@ public:
     void display() { cout << "The Binary String is: " << _string << endl; }
     bool check_binary()
     {
-        bool found = false;
+        bool found = true;
         for (int i = 0; i < _string.length(); i++)
         {
             if (_string[i] != '0' && _string[i] != '1')
             {
-                found = true;
+                found = false;
                 break;
             }
         }
@@ -90,7 +90,7 @@ int main()
 
     Binary _String;
     _String.dataEntry();
-    if (_String.check_binary() == true)
+    if (_String.check_binary() == false)
     {
         _String.show_Error();
     }
